@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaTwitter, FaDiscord, FaFacebook, FaYoutube } from "react-icons/fa";
 import "./Footer.css";
 import bitcoinIMG1 from "../images/bitcoinIMG1.webp";
 import bitcoinIMG2 from "../images/bitcoinIMG2.webp";
@@ -18,9 +18,15 @@ const Footer = () => {
         </footer>
 
         <div className="social-icons">
-          <FaGithub className="icon" />
+          <FaTwitter className="icon" />
 
-          <FaLinkedin className="icon" />
+          <FaDiscord className="icon" />
+
+          <FaFacebook className="icon" />
+
+          <FaYoutube className="icon" />
+
+
         </div>
       </div>
 

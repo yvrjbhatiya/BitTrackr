@@ -14,8 +14,12 @@
   height: 70px;
   border-radius: 50%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  margin: 6rem;
 }
 
 .center-text {
@@ -46,11 +50,11 @@ img {
 .icon {
   font-size: 24px;
   margin: 0 10px;
-  color: #59aae4;
+  color: white;
 }
 
 .icon:hover {
-  color: #6f86d6;
+  color: #53b4e8;
   transform: scale(1.4);
   transition: 0.3s ease-in-out;
 }

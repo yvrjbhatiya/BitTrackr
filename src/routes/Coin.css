@@ -1,201 +1,217 @@
-.coin-container{
-    margin-top: 5rem;
-    
+.coin-container {
+  margin-top: 5rem;
 }
 
 .coin-container .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 8px;
-    margin: 1rem auto; 
-    padding: .7rem 1rem;
-    font-weight: 600;
-    background-color: #0a0314;
-    color: #f3f2f4;
-    font-size: 1.5rem;
-    width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  margin: 1rem auto;
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+  background-color: #0a0314;
+  color: #f3f2f4;
+  font-size: 1.5rem;
+  width: 70%;
 }
 
 .rank-btn {
-    box-shadow: 0px 0px 8px #59aae441;
-    border-radius: 8px;
-    padding: .5rem 1rem;
-    text-align: center;
-    color: #ffffff;
-    font-weight: bold;
+  box-shadow: 0px 0px 8px #59aae441;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1rem 0;
-    width: 100%; /* Set width to 100% to take up full space */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  width: 100%; /* Set width to 100% to take up full space */
 }
 
 .info img {
-    width: 40px; /* Adjust image size */
-    height: 40px;
-    margin-right: 1rem;
+  width: 40px; /* Adjust image size */
+  height: 40px;
+  margin-right: 1rem;
 }
 
 .info p {
-    margin: 0;
+  margin: 0;
 }
 
-.column3 h1{
-    color: #0ecb81!important;
-    font-size: 2.2rem;
+.column3 h1 {
+  color: #0ecb81 !important;
+  font-size: 2.2rem;
 }
 
-.column1, .column2, .column3 {
-    display: flex;
-    align-items: center;
+.column1,
+.column2,
+.column3 {
+  display: flex;
+  align-items: center;
 }
-
-
 
 .column2 img {
-    width: 50px; 
-    height: auto;
-    margin-right: 1rem;
+  width: 50px;
+  height: auto;
+  margin-right: 1rem;
 }
 
-.column2 span{
-    font-size: 1rem;
-    font-weight: 200;
-    color: white;
-    margin-left: 9px;
-    margin-top: 12px;
+.column2 span {
+  font-size: 1rem;
+  font-weight: 200;
+  color: white;
+  margin-left: 9px;
+  margin-top: 12px;
 }
 
 .column2 p {
-    margin: 0;
-    font-size: 3rem;
-    text-transform: uppercase;
+  margin: 0;
+  font-size: 3rem;
+  text-transform: uppercase;
 }
 
 hr {
-    height: 1px; 
-    width: 60%; 
-    margin: 20px auto; 
-    background-color: #59aae4d3; 
-    border: none;
-    box-shadow: 0px 0px 8px #59aae4d3; 
+  height: 1px;
+  width: 60%;
+  margin: 20px auto;
+  background-color: #59aae4d3;
+  border: none;
+  box-shadow: 0px 0px 8px #59aae4d3;
 }
 
 table {
-    width: 100%;
-    margin-top: 1rem;
-    color: #ffffff;
+  width: 100%;
+  margin-top: 1rem;
+  color: #ffffff;
 }
 
-
-td, th {
-    padding: 8px;
-    text-align: center;
-    border-bottom: 1px solid #444;
+td,
+th {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #444;
 }
 
 th {
-    background-color: #333;
+  background-color: #333;
 }
 
 .stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    width: 100%;
-    margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  margin-top: 1rem;
 }
 
 .stats .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: .5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
 }
 
 .stats .row p:first-child {
-    color: #d3d3d3;
-    margin-right: 1rem;
+  color: #d3d3d3;
+  margin-right: 1rem;
 }
-
 
 .about-para {
-    margin-top: 2rem;
-    line-height: 1.5;
-    font-size: 1.2rem;
-    font-weight: 400;
-    height: 15rem;
-    overflow-y: auto; 
-    padding: 5px;
-    text-align: justify;
+  margin-top: 2rem;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  font-weight: 400;
+  height: 15rem;
+  overflow-y: auto;
+  padding: 5px;
+  text-align: justify;
 }
 .about-para::-webkit-scrollbar {
-    width: 5px;
+  width: 5px;
 }
 
+
+
 @media screen and (max-width: 1280px) {
-    .coin-container .content {
-        padding: 0.5rem;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-    }
+  .coin-container {
+    margin-top: 7rem;
+  }
+  .coin-container .content {
+    padding: 0.5rem;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
 
-    .info {
-        grid-template-columns: 1fr;
-    }
+  .info {
+    grid-template-columns: 1fr;
+  }
 
-    .stats {
-        grid-template-columns: 1fr;
-    }
+  .stats {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Styles for tablets (landscape and portrait) */
 @media screen and (max-width: 1024px) {
-    .row{
-        flex-direction: column;
-        gap: 8px;
-    }
+  .coin-container {
+    margin-top: 5rem;
+  }
+  .row {
+    flex-direction: column;
+    gap: 8px;
+  }
 
-    .about-para{
-        text-align: center;
-    }
+  .about-para {
+    text-align: center;
+  }
 
-    .column2 {
-        margin-top: 8px;
-    }
-    .column3 {
-        margin-top: -16px;
-    }
+  .column2 {
+    margin-top: 8px;
+  }
+  .column3 {
+    margin-top: -16px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .row{
-        flex-direction: column;
-        
-    }
-    .column2 {
-        margin-top: 8px;
-    }
-    .column3 {
-        margin-top: -16px;
-    }
+  .coin-container {
+    margin-top: 5rem;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .column2 {
+    margin-top: 8px;
+  }
+  .column3 {
+    margin-top: -16px;
+  }
+  .about-para {
+    height: 20rem;
+  }
 }
 
 /* Styles for mobile devices (375x667) */
 @media screen and (max-width: 375px) {
-    .row{
-        flex-direction: column;
-        
-    }
-    .column2 {
-        margin-top: 8px;
-    }
-    .column3 {
-        margin-top: -16px;
-    }
+  .coin-container {
+    margin-top: 5rem;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .column2 {
+    margin-top: 8px;
+  }
+  .column3 {
+    margin-top: -16px;
+  }
+  .about-para {
+    height: 20rem;
+  }
 }

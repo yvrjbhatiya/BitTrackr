@@ -10,7 +10,7 @@ const Coins = (props) => {
 
   // Calculate the index range for the current page
   const startIndex = (currentPage - 1) * coinsPerPage;
-  const endIndex = startIndex + coinsPerPage;
+  const endIndex = Math.min(startIndex + coinsPerPage, props.coins.length);
 
   const displayedCoins = props.coins.slice(startIndex, endIndex);
 
@@ -26,13 +26,13 @@ const Coins = (props) => {
           <p className='coin-name'>Coin</p>
           <p>Price</p>
           <p>24h Change</p>
-          <p className='hide-mobile'>Market Cap</p>
+          <p>Market Cap</p>
         </div>
 
         {displayedCoins.map((coin, index) => {
           const coinIndex = startIndex + index + 1;
           return (
-            <Link to={`/coin/${coin.id}`} element={<Coins />} key={coin.id}>
+            <Link to={`/coin/${coin.id}`} key={coin.id}>
               <CoinItem coins={{ ...coin, market_cap_rank: coinIndex }} />
             </Link>
           );
