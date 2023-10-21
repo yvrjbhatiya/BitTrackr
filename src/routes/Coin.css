@@ -1,0 +1,143 @@
+.coin-container{
+    margin-top: 5rem;
+    
+}
+
+.coin-container .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    margin: 1rem auto; 
+    padding: .7rem 1rem;
+    font-weight: 600;
+    background-color: #0f051d;
+    color: #f3f2f4;
+    font-size: 1.5rem;
+    width: 70%;
+}
+
+.rank-btn {
+    box-shadow: 0px 0px 8px #59aae441;
+    border-radius: 8px;
+    padding: .5rem 1rem;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    width: 100%; /* Set width to 100% to take up full space */
+}
+
+.info img {
+    width: 40px; /* Adjust image size */
+    height: 40px;
+    margin-right: 1rem;
+}
+
+.info p {
+    margin: 0;
+}
+
+.column h1{
+    color: #0ecb81!important;
+    font-size: 2.2rem;
+}
+
+.column {
+    display: flex;
+    align-items: center;
+}
+
+.column img {
+    width: 50px; 
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 1rem;
+}
+
+.column span{
+    font-size: 1rem;
+    font-weight: 200;
+    color: white;
+    margin-left: 9px;
+    margin-top: 12px;
+}
+
+.column p {
+    margin: 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+hr {
+    height: 1px; 
+    width: 60%; 
+    margin: 20px auto; 
+    background-color: #59aae4d3; 
+    border: none;
+    box-shadow: 0px 0px 8px #59aae4d3; 
+}
+
+table {
+    width: 100%;
+    margin-top: 1rem;
+    color: #ffffff;
+}
+
+
+td, th {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+th {
+    background-color: #333;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.stats .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+.stats .row p:first-child {
+    color: #d3d3d3;
+    margin-right: 1rem;
+}
+
+
+.about-para {
+    margin-top: 2rem;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 700px) {
+    .coin-container .content {
+        padding: 0.5rem;
+    }
+
+    .info {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
