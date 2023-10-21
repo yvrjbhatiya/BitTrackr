@@ -1,74 +1,97 @@
 .container {
-    max-width: 1140px;
-    margin: auto;
-    margin-top: 5rem;
+  max-width: 1140px;
+  margin: auto;
+  margin-top: 5rem;
 }
 
 .heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
-    box-shadow: 0px 0px 12px #18191b;
-    border-radius: 8px;
-    margin: 2rem 1rem;
-    padding: .7rem 1rem;
-    font-weight: 700;
-    height: 4rem;
-    font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+  box-shadow: 0px 0px 12px #18191b;
+  border-radius: 8px;
+  margin: 2rem 1rem;
+  padding: 0.7rem 1rem;
+  font-weight: 700;
+  height: 4rem;
+  font-size: 1.5rem;
 }
 
 .coin-name {
-    margin-left: -2rem;
+  margin-left: -2rem;
 }
 
 .coin-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 8px;
-    margin: 2rem 1rem;
-    padding: .7rem 1rem;
-    font-weight: 600;
-    background-color: #0a0314;
-    border-bottom: 1px solid #f3f2f497;
-    color: #f3f2f4;
-    font-size: 1.5rem;
-    font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  margin: 2rem 1rem;
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+  background-color: #0a0314;
+  border-bottom: 1px solid #f3f2f497;
+  color: #f3f2f4;
+  font-size: 1.5rem;
+  font-weight: 500;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .coin-row:hover {
-    transform: scale(1.04);
-    transition: .3s ease-in-out;
-    cursor: pointer;
+  transform: scale(1.04);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 img {
-    height: 40px;
-    margin-right: 8px;
-    width: auto;
+  height: 40px;
+  margin-right: 8px;
+  width: auto;
 }
 
 .img-symbol {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .red {
-    color: red;
+  color: red;
 }
 
 .green {
-    color: #0ecb81;
+  color: #0ecb81;
 }
 
-
-
-@media screen and (max-width: 720px) {
-    .hide-mobile {
-        display: none;
-    }
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
+.pagination button {
+  background-color: #f3f2f4;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 2.2rem;
+  width: 2.2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0.4rem;
+  border: none;
+}
 
+.pagination button.active {
+  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+  color: white;
+}
 
+@media screen and (max-width: 768px) {
+  .coin-row {
+    width: fit-content;
+  }
+  .container {
+    overflow: hidden;
+  }
+}

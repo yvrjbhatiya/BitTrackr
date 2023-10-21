@@ -31,12 +31,12 @@ const Coin = () => {
             <div className="column">
               <h3 className="rank-btn">Rank # {coin.market_cap_rank}</h3>
             </div>
-            <div className="column">
+            <div className="column2">
               {coin.image ? <img src={coin.image.small} alt="" /> : null}
               <p>{coin.name}</p>
               {coin.symbol ? <span>{coin.symbol.toUpperCase()}</span> : null}
             </div>
-            <div className="column">
+            <div className="column3">
               {coin.market_data?.current_price ? (
                 <h1>${coin.market_data.current_price.usd.toLocaleString()}</h1>
               ) : null}

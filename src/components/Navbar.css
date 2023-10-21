@@ -1,7 +1,9 @@
+/* Default styles for all resolutions */
 .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2rem;
 }
 
 .nav-icon {
@@ -9,13 +11,101 @@
     color: #59aae4;
 }
 
-.logo{
+.logo {
     font-size: 4rem;
     margin-left: 1rem;
 }
 
-.purple {
+.logo2 {
     color: #59aae4;
     font-size: 4rem;
+}
 
+/* Styles for standard desktop monitors (1920x1080) */
+@media screen and (min-width: 1920px) {
+    .nav-icon {
+        font-size: 3rem;
+    }
+
+    .logo {
+        font-size: 4rem;
+    }
+
+    .logo2 {
+        font-size: 4rem;
+    }
+}
+
+/* Styles for Macbooks (1440x1280) */
+@media screen and (max-width: 1440px) {
+    .nav-icon {
+        font-size: 3rem;
+    }
+
+    .logo {
+        font-size: 4rem;
+    }
+
+    .logo2 {
+        font-size: 4rem;
+    }
+}
+
+/* Styles for smaller laptops (1280x720) */
+@media screen and (max-width: 1280px) {
+    .nav-icon {
+        font-size: 2.5rem;
+    }
+
+    .logo {
+        font-size: 3.5rem;
+    }
+
+    .logo2 {
+        font-size: 3.5rem;
+    }
+}
+
+/* Styles for tablets (landscape and portrait) */
+@media screen and (max-width: 1024px) {
+    .nav-icon {
+        font-size: 2.5rem;
+    }
+
+    .logo {
+        font-size: 3.5rem;
+    }
+
+    .logo2 {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-icon {
+        font-size: 2.25rem;
+    }
+
+    .logo {
+        font-size: 3.25rem;
+    }
+
+    .logo2 {
+        font-size: 3.25rem;
+    }
+}
+
+/* Styles for mobile devices (375x667) */
+@media screen and (max-width: 375px) {
+    .nav-icon {
+        font-size: 2rem;
+    }
+
+    .logo {
+        font-size: 3rem;
+    }
+
+    .logo2 {
+        font-size: 3rem;
+    }
 }

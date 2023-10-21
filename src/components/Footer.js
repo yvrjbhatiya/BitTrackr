@@ -13,10 +13,8 @@ const Footer = () => {
 
       <div className="center-text">
         <footer>
-          <p>
-            Created by Yuvraj | Copyright © {new Date().getFullYear()}. All
-            rights are reserved
-          </p>
+          <p>Track and trade</p>
+          <p className="acc"> Digital Currencies with Ease</p>
         </footer>
 
         <div className="social-icons">
