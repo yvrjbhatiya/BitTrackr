@@ -1,59 +1,72 @@
 .container {
-  max-width: 1140px;
-  margin: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
   margin-top: 5rem;
 }
 
-.heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
-  box-shadow: 0px 0px 12px #18191b;
-  border-radius: 8px;
-  margin: 2rem 1rem;
-  padding: 0.7rem 1rem;
-  font-weight: 700;
-  height: 4rem;
-  font-size: 1.5rem;
+.coin-table {
+  width: 100%;
+  overflow-x: scroll;
 }
 
-.coin-name {
-  margin-left: -2rem;
+.coin-table::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
-.coin-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 8px;
-  margin: 2rem 1rem;
-  padding: 0.7rem 1rem;
-  font-weight: 600;
-  background-color: #0a0314;
-  border-bottom: 1px solid #f3f2f497;
-  color: #f3f2f4;
+.coin-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.coin-table th,
+.coin-table td {
+  padding: 10px;
+  text-align: center;
   font-size: 1.5rem;
   font-weight: 500;
-  overflow-x: auto;
-  white-space: nowrap;
 }
 
-.coin-row:hover {
+.coin-table th {
+  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+
+.coin-table tbody tr:hover {
   transform: scale(1.04);
   transition: 0.3s ease-in-out;
   cursor: pointer;
 }
 
-img {
-  height: 40px;
-  margin-right: 8px;
-  width: auto;
+.pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination button {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 5px;
+  padding: 8px 16px;
+  background-color: #f3f2f4;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+  color: white;
 }
 
 .img-symbol {
   display: flex;
   align-items: center;
+  gap: 8px;
 }
 
 .red {
@@ -62,36 +75,4 @@ img {
 
 .green {
   color: #0ecb81;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.pagination button {
-  background-color: #f3f2f4;
-  border-radius: 50%;
-  cursor: pointer;
-  height: 2.2rem;
-  width: 2.2rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin: 0 0.4rem;
-  border: none;
-}
-
-.pagination button.active {
-  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
-  color: white;
-}
-
-@media screen and (max-width: 768px) {
-  .coin-row {
-    width: fit-content;
-  }
-  .container {
-    overflow: hidden;
-  }
 }
