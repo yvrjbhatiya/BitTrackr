@@ -1,135 +1,96 @@
 .footer-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  background-color: #0a0314;
-  padding: 10px;
-  height: 10rem;
+  background-color: transparent;
+  color: #fff;
+  padding: 2rem;
   margin-top: 10rem;
 }
 
 .left-circle,
 .right-circle {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: space-around;
-  align-items: stretch;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: stretch;
-  margin: 6rem;
+  flex: 1;
+  text-align: center;
+}
+
+.left-circle img,
+.right-circle img {
+  width: 100px;
+  height: 100px;
 }
 
 .center-text {
-  padding-top: 2rem;
-  flex-grow: 1;
+  flex: 2;
   text-align: center;
-  color: white;
+}
+
+.footer {
   font-size: 1.2rem;
 }
 
+img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
 .acc {
-  margin-top: 4px;
-  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-}
-
-img {
-  width: 60px;
-  height: 60px;
-  margin: 0 10px;
+  margin-top: 1rem;
 }
 
 .icon {
-  font-size: 24px;
-  margin: 0 10px;
-  color: white;
+  font-size: 2rem;
+  margin: 0 1rem;
+  cursor: pointer;
 }
 
-.icon:hover {
-  color: #53b4e8;
-  transform: scale(1.4);
-  transition: 0.3s ease-in-out;
+.footer-links {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
-/* Media queries for responsive design */
-
-/* Styles for standard desktop monitors (1920x1080) */
-@media screen and (min-width: 1920px) {
-  .left-circle,
-  .right-circle {
-    width: 80px;
-    height: 80px;
-  }
-  .icon {
-    font-size: 28px;
-  }
+.footer-links p {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+  cursor: pointer;
 }
 
-/* Styles for Macbooks (1440x1280) */
-@media screen and (max-width: 1440px) {
-  .left-circle,
-  .right-circle {
-    width: 60px;
-    height: 60px;
-  }
-  .icon {
-    font-size: 20px;
-  }
-}
-
-/* Styles for smaller laptops (1280x720) */
-@media screen and (max-width: 1280px) {
-  .left-circle,
-  .right-circle {
-    width: 50px;
-    height: 50px;
-  }
-  .icon {
-    font-size: 18px;
-  }
-}
-
-/* Styles for tablets (landscape and portrait) */
-@media screen and (max-width: 1024px) {
-  .left-circle,
-  .right-circle {
-    width: 40px;
-    height: 40px;
-  }
-  .icon {
-    font-size: 16px;
-  }
+.footer-links p:hover {
+  color: #59aae4;
 }
 
 @media screen and (max-width: 768px) {
   .footer-container {
     flex-direction: column;
-    height: auto;
+    text-align: center;
   }
-  .left-circle,
-  .right-circle {
-    display: none;
-  }
-  .icon {
-    font-size: 20px;
-  }
-}
 
-/* Styles for mobile devices (375x667) */
-@media screen and (max-width: 375px) {
-  .left-circle,
-  .right-circle {
-    display: none;
+  .center-text {
+    margin-top: 1.5rem;
   }
-  .icon {
-    font-size: 18px;
+
+  .footer-links {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .footer-links p {
+    margin: 0.5rem 0;
+  }
+
+  .left-circle,.right-circle{
+    display: none;
   }
 }

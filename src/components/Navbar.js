@@ -1,17 +1,56 @@
-import React from 'react'
-import {RiBitCoinFill} from 'react-icons/ri'
-import {Link} from 'react-router-dom'
-import './Navbar.css'
+import React, { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar = () => {
-    return (
-        <Link to='/'>
-            <div className='navbar'>
-                <RiBitCoinFill className='nav-icon' />
-                <h1 className='logo'> BIT <span className='logo2'>TRACKR</span></h1>
-            </div>
-        </Link>
-    )
-}
+  const [isOpen, setIsOpen] = useState(false);
 
-export default Navbar
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  return (
+    <nav className="navbar">
+      <div className="navbar-container">
+        <Link to="/" className="navbar-logo" onClick={closeMenu}>
+          Bit <span>Trackr</span>
+        </Link>
+
+        <ul className="nav-links">
+          <li className="nav-item">
+            <Link to="/" onClick={closeMenu}>
+              Home
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/market" onClick={closeMenu}>
+              Market
+            </Link>
+          </li>
+        </ul>
+        <div className={`menu-icon ${isOpen ? 'close' : ''}`} onClick={handleToggle}>
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </div>
+        <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
+          <li className="nav-item">
+            <Link to="/" onClick={closeMenu}>
+              Home
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/market" onClick={closeMenu}>
+              Market
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

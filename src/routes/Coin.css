@@ -76,12 +76,11 @@
 }
 
 hr {
-  height: 1px;
+  height: .5px;
   width: 60%;
   margin: 20px auto;
-  background-color: #59aae4d3;
+  background-color: #59aae443;
   border: none;
-  box-shadow: 0px 0px 8px #59aae4d3;
 }
 
 table {

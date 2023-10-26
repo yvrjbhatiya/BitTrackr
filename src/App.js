@@ -1,37 +1,59 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import { Routes, Route } from 'react-router-dom'
-import Coins from './components/Coins'
-import Coin from './routes/Coin'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import {useRoutes, useLocation } from 'react-router-dom';
+import Coins from './components/Coins';
+import Coin from './routes/Coin';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Hero from './components/Hero';
 
 function App() {
+  const [coins, setCoins] = useState([]);
 
-  const [coins, setCoins] = useState([])
-
-  const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false&locale=en'
+  const url =
+    'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false&locale=en';
 
   useEffect(() => {
-    axios.get(url).then((response) => {
-      setCoins(response.data)
-    }).catch((error) => {
-      console.log(error)
-    })
-  }, [])
+    axios
+      .get(url)
+      .then((response) => {
+        setCoins(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  const coinRoutes = useRoutes([
+    {
+      path: '/',
+      element: <Coins coins={coins} />,
+    },
+    {
+      path: '/coin',
+      element: <Coin />,
+      children: [
+        {
+          path: ':coinId',
+          element: <Coin />,
+        },
+      ],
+    },
+    {
+      path: '/market',
+      element: <Coins coins={coins} />,
+      
+    }
+  ]);
+
+  const location = useLocation();
 
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route path='/' element={<Coins coins={coins} />} />
-        <Route path='/coin' element={<Coin />}>
-          <Route path=':coinId' element={<Coin />} />
-        </Route>
-      </Routes>
-      <Footer/>
-
+      {location.pathname === '/' && <Hero />} 
+      {coinRoutes}
+      {location.pathname === '/' && <Footer />}
     </>
   );
 }

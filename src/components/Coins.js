@@ -21,7 +21,7 @@ const Coin = (props) => {
 
   const scrollMarket = () => {
     window.scrollTo({
-      top: window.pageYOffset - 800,
+      top: window.pageYOffset -500,
       behavior: 'smooth',
     });
   };
@@ -33,6 +33,7 @@ const Coin = (props) => {
   return (
     <>
       <div className='container'>
+        <h2>Market Update</h2>
         <div className='coin-table'>
           <table>
             <thead>
@@ -54,7 +55,7 @@ const Coin = (props) => {
                     <td>
                       <Link to={`/coin/${coin.id}`} onClick={scrollTop}>
                         <div className='img-symbol'>
-                          <img src={coin.image} alt='' />
+                          <img src={coin.image} alt=''/>
                           <p>{coin.symbol.toUpperCase()}</p>
                         </div>
                       </Link>

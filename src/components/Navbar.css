@@ -1,111 +1,103 @@
-/* Default styles for all resolutions */
+
 .navbar {
+    background: transparent;
+    color: #fff;
+    padding: 2rem 0;
+    font-family: "Space Grotesk", sans-serif;
+    position: relative;
+    z-index: 1; 
+  }
+  
+  .navbar-logo {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  .navbar-logo span {
+    color: #59aae4;
+  }
+  
+  .navbar-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 1rem;
-}
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+  }
 
-.nav-icon {
-    font-size: 4rem;
-    color: #59aae4;
-}
-
-.logo {
-    font-size: 4rem;
-    margin-left: 1rem;
-}
-
-.logo2 {
-    color: #59aae4;
-    font-size: 4rem;
-}
-
-/* Styles for standard desktop monitors (1920x1080) */
-@media screen and (min-width: 1920px) {
-    .nav-icon {
-        font-size: 4rem;
+  .nav-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-right: 3rem;
+  }
+  
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    margin-top: 10px;
+    z-index: 2; 
+  }
+  
+  .close-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    display: none;
+    z-index: 3; 
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    font-size: 2rem;
+    font-weight: 600;
+    position: fixed;
+    top: 0;
+    right: 100%;
+    height: 100vh;
+    width: 70%;
+    background: #110f1f;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 15rem;
+    transition: right 0.3s ease;
+    z-index: 1; 
+  }
+  
+  .nav-menu.active {
+    right: 0;
+  }
+  
+  .nav-item {
+    margin: 1rem 0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav-links{
+        display: none;
     }
-
-    .logo {
-        font-size: 4rem;
+    .menu-icon {
+      display: block;
     }
-
-    .logo2 {
-        font-size: 4rem;
+  
+    .nav-menu.active + .menu-icon.close {
+      display: block;
     }
-}
-
-/* Styles for Macbooks (1440x1280) */
-@media screen and (max-width: 1440px) {
-    .nav-icon {
-        font-size: 4rem;
+  
+    .nav-menu {
+      width: 100%;
     }
-
-    .logo {
-        font-size: 4rem;
-    }
-
-    .logo2 {
-        font-size: 4rem;
-    }
-}
-
-/* Styles for smaller laptops (1280x720) */
-@media screen and (max-width: 1280px) {
-    .nav-icon {
-        font-size: 3rem;
-    }
-
-    .logo {
-        font-size: 3.5rem;
-    }
-
-    .logo2 {
-        font-size: 3.5rem;
-    }
-}
-
-/* Styles for tablets (landscape and portrait) */
-@media screen and (max-width: 1024px) {
-    .nav-icon {
-        font-size: 3rem;
-    }
-
-    .logo {
-        font-size: 3.5rem;
-    }
-
-    .logo2 {
-        font-size: 3.5rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .nav-icon {
-        font-size: 3.25rem;
-    }
-
-    .logo {
-        font-size: 3.25rem;
-    }
-
-    .logo2 {
-        font-size: 3.25rem;
-    }
-}
-
-/* Styles for mobile devices (375x667) */
-@media screen and (max-width: 375px) {
-    .nav-icon {
-        font-size: 3rem;
-    }
-
-    .logo {
-        font-size: 3rem;
-    }
-
-    .logo2 {
-        font-size: 3rem;
-    }
-}
+  }
+  
