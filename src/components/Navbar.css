@@ -44,7 +44,7 @@
     display: none;
     cursor: pointer;
     font-size: 1.8rem;
-    margin-top: 10px;
+    margin-top: 8px;
     z-index: 2; 
   }
   
@@ -98,6 +98,21 @@
   
     .nav-menu {
       width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .navbar-logo {
+      font-size: 2rem;
+    }
+
+    .nav-menu {
+      padding-top: 10rem;
+    }
+
+    .menu-icon {
+      font-size: 1.5rem;
+      
     }
   }
   
