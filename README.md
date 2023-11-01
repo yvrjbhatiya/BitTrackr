@@ -35,6 +35,6 @@ Welcome to **BitTrackr**, is a website that allows users to search for informati
 ## Hosted Url- 
 
    ```
-   
+   https://bit-trackr.vercel.app/
    ```
 
