@@ -1,0 +1,128 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 10rem;
+}
+
+.container h2{
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: .8rem;
+}
+
+.coin-table {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.coin-table::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.coin-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+.coin-table th {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.coin-table td {
+  padding: 1.5rem .8rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.coin-table th {
+  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  white-space: nowrap;
+  padding: 1rem;
+}
+
+
+.coin-table tbody tr:hover {
+  background-color: #59aae40f;
+  cursor: pointer;
+}
+
+.pagination {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination button {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 5px;
+  padding: 10px 16px;
+  background-color: #f3f2f4;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+  color: white;
+}
+
+.img-symbol {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: #0ecb81;
+}
+
+@media screen and (max-width: 768px){
+
+  .coin-table th{
+    font-size: 1.5rem;
+    padding: 1rem 1.8rem;
+
+  }
+
+  .coin-table td{
+    font-size: 1.2rem;
+    padding: 1.5rem 1.8rem;
+
+  }
+
+  .container h2{
+    font-size: 2rem;
+  }
+
+  .pagination button {
+    font-size: 1rem;
+  }
+  
+  .img-symbol {
+    gap: 15px;
+  }
+
+  .img-symbol img{
+    width: 50px;
+    height: 50px;
+  }
+
+}
+
+  
